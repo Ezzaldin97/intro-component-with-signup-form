@@ -37,8 +37,8 @@ The designs were created to the following widths:
 */
 
 :root{
-    --dbg-img: url('images/bg-intro-desktop.png');
-    --mbg-img: url('images/bg-intro-mobile.png');
+    --dbg-img: url('intro-component-with-signup-form/images/bg-intro-desktop.png');
+    --mbg-img: url('intro-component-with-signup-form/images/bg-intro-mobile.png');
 /*colors*/
     --red-color: hsl(0, 100%, 74%);
     --blue-color: hsl(248, 32%, 49%);
