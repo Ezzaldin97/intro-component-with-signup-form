@@ -1,0 +1,261 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Red: hsl(0, 100%, 74%) 
+- Green: hsl(154, 59%, 51%)
+
+### Accent
+
+- Blue: hsl(248, 32%, 49%)
+
+### Neutral
+
+- Dark Blue: hsl(249, 10%, 26%) 
+- Grayish Blue: hsl(246, 25%, 77%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 500, 600, 700
+*/
+
+:root{
+    --dbg-img: url('D:/free codecamp web design/frontend mentor project/intro-component-with-signup-form-master/images/bg-intro-desktop.png');
+    --mbg-img: url('D:/free codecamp web design/frontend mentor project/intro-component-with-signup-form-master/images/bg-intro-mobile.png');
+/*colors*/
+    --red-color: hsl(0, 100%, 74%);
+    --blue-color: hsl(248, 32%, 49%);
+    --green-color: hsl(154, 59%, 51%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --gray-blue: hsl(246, 25%, 77%);
+/*font*/
+    --main-font: 'Poppins', sans-serif;
+/*font-weights*/
+    --w-400: 400;
+    --w-500: 500;
+    --w-600: 600;
+    --w-700: 700;
+/*screen-width*/
+    --desktop-width: 1440px;
+    --tablet-width: 768px;
+    --mobile-width: 375px;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--red-color);
+    background-image: var(--dbg-img);
+}
+#container{
+    display: grid;
+    grid-template-areas: 'desc form';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+#container #description-part{
+    grid-area: desc;
+    font-family: var(--main-font);
+    color: #fff;
+    margin: auto 40px auto auto;
+}
+#container #description-part h1{
+    font-size: 40px;
+    margin: auto auto 10px 80px;
+    line-height: 40px;
+}
+#container #description-part h5{
+    font-weight: var(--w-500);
+    margin-left: 80px;
+}
+#container #form-part{
+    grid-area: form;
+    margin-left: 30px;
+}
+#container #form-part #try-it-btn{
+    background-color: var(--blue-color);
+    color: #fff;
+    text-align: center;
+    padding-top: 15px;
+    font-family: var(--main-font);
+    border-radius: 10px;
+    width: 480px;
+    height: 50px;
+    cursor: pointer;
+}
+#container #form-part #try-it-btn h5{
+    font-weight: var(--w-400);
+    margin: auto;
+}
+#container #form-part #try-it-btn h5 span{
+    font-weight: var(--w-700);
+}
+#container #form-part #sign-up-form{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 480px;
+    margin-top: 30px;
+    text-align: center;
+    padding: 30px;
+}
+#container #form-part #sign-up-form .fill-it{
+    display: block;
+    font-family: var(--main-font);
+    font-weight: var(--w-600);
+    outline: none;
+    border: 1px solid var(--gray-blue);
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 15px; 
+}
+#container #form-part #sign-up-form .fill-it:focus{
+    border: 1px solid var(--dark-blue);
+    color: var(--dark-blue);
+}
+#container #form-part #sign-up-form h5{
+    font-family: var(--main-font);
+    font-weight: var(--w-500);
+    font-style: italic;
+    font-size: 10px;
+    float: right;
+    color: var(--red-color);
+    margin-bottom: 15px;
+}
+#container #form-part #sign-up-form .icon-error{
+    float: right;
+    margin: -40px -120px auto auto;
+}
+#container #form-part #sign-up-form #submit-btn{
+    display: block;
+    text-align: center;
+    background-color: var(--green-color);
+    width: 100%;
+    height: 50px;
+    font-family: var(--main-font);
+    font-weight: var(--w-500);
+    color: #fff;
+    text-transform: uppercase;
+    outline: none;
+    border-width: 0;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+#container #form-part #sign-up-form h6{
+    font-family: var(--main-font);
+    color: var(--gray-blue);
+    font-weight: var(--w-600);
+}
+#container #form-part #sign-up-form h6 span{
+    color: var(--red-color);
+    font-weight: var(--w-700);
+    cursor: pointer;
+}
+@media (max-width: 930px){
+    #container{
+        display: grid;
+        grid-template-areas: 
+        'desc'
+        'form';
+        position: static;
+        top: 0%;
+        left: 0%;
+        transform: translate(-0%, -0%);
+        width: 75%;
+        margin: 20% auto 10% auto;
+    }
+    #container #description-part{
+        text-align: center;
+        grid-area: desc;
+        font-family: var(--main-font);
+        color: #fff;
+        margin: auto auto 40px auto;
+    }
+    #container #description-part h1{
+        font-size: 35px;
+        margin: auto;
+        line-height: auto;
+    }
+    #container #description-part h5{
+        margin-left: auto;
+    }
+    #container #form-part{
+        margin: auto;
+    }
+    #container #form-part #try-it-btn{
+        width: 100%;
+    }
+    #container #form-part #sign-up-form{
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px){
+    body{
+        background-image: var(--mbg-img);
+    }
+    #container{
+        display: grid;
+        grid-template-areas: 
+        'desc'
+        'form';
+        position: static;
+        top: 0%;
+        left: 0%;
+        transform: translate(-0%, -0%);
+        width: 80%;
+        margin: 20% auto 10% auto;
+    }
+    #container #description-part{
+        text-align: center;
+        grid-area: desc;
+        font-family: var(--main-font);
+        color: #fff;
+        margin: auto auto 40px auto;
+    }
+    #container #description-part h1{
+        font-size: 25px;
+        margin: auto;
+        line-height: auto;
+    }
+    #container #description-part h5{
+        margin-left: auto;
+    }
+    #container #form-part{
+        margin-left: auto;
+    }
+    #container #form-part #try-it-btn{
+        width: 100%;
+    }
+    #container #form-part #sign-up-form{
+        width: 100%;
+    }
+}
+@media (max-width: 340px){
+    #container #form-part #try-it-btn{
+        height: 60px;
+    }
+}
